@@ -16,3 +16,7 @@ RUN tar -xf ffmpeg-release-64bit-static.tar.xz && \
 WORKDIR /
 
 ENTRYPOINT ["/bin/bash"]
+
+# Install beego & bee
+RUN go get github.com/astaxie/beego
+RUN go get github.com/beego/bee
