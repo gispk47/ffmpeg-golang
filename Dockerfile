@@ -16,8 +16,13 @@ RUN tar -xf ffmpeg-release-64bit-static.tar.xz && \
 
 WORKDIR /
 
-ENTRYPOINT ["/bin/bash"]
+# ENTRYPOINT ["/bin/bash"]
 
 # Install beego & bee
 RUN go get github.com/astaxie/beego
 RUN go get github.com/beego/bee
+
+EXPOSE 8080
+# Set the entry point of the container to the bee command that runs the
+# application and watches for changes
+CMD ["bee", "run"]
