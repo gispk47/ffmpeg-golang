@@ -8,7 +8,7 @@ MAINTAINER Matt Snoby <matt.snoby@icloud.com>
 #
 #
 #RUN apk --no-cache add ca-certificates curl bash xz-libs git
-RUN apt-get install ca-certificates curl bash xz-libs git
+RUN apt-get update && apt-get install -y ca-certificates curl bash xz-libs git
 WORKDIR /tmp
 RUN curl -L -O http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
 RUN tar -xf ffmpeg-release-64bit-static.tar.xz && \
