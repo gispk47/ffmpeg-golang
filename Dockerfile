@@ -1,4 +1,4 @@
-FROM golang:1.7-alpine
+FROM golang:1.7
 
 MAINTAINER Matt Snoby <matt.snoby@icloud.com>
 
